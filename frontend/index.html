@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memento - Create Session</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Memento</h1>
+    <p class="subtitle">Create a customized compliance session</p>
+
+    <form id="sessionForm" class="card">
+      <label>Session Name</label>
+      <input type="text" id="sessionName" placeholder="e.g. CY355 Final Exam" required />
+
+      <label>Template</label>
+      <select id="template" required>
+        <option value="">Select template</option>
+        <option value="assessment">Assessment</option>
+        <option value="meeting">Meeting</option>
+        <option value="training">Training</option>
+        <option value="event">Event</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <label>Duration (minutes)</label>
+      <input type="number" id="duration" min="1" placeholder="e.g. 90" required />
+
+      <label>Maximum Allowed Exits</label>
+      <input type="number" id="maxExits" min="0" placeholder="e.g. 0" required />
+
+      <label>Theme</label>
+      <select id="theme">
+        <option value="default">Default</option>
+        <option value="academic">Academic</option>
+        <option value="corporate">Corporate</option>
+        <option value="event">Event</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <fieldset>
+        <legend>Allowed Features</legend>
+
+        <label class="checkbox">
+          <input type="checkbox" value="timer" checked />
+          Timer
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="quiz" />
+          Quiz/Form
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="notes" />
+          Notes
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="documents" />
+          Documents
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" value="announcements" />
+          Announcements
+        </label>
+      </fieldset>
+
+      <button type="submit">Generate Session</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <h2>Session Generated</h2>
+      <p id="sessionLink"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memento - Session</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+
+    <section class="card">
+
+        <h1 id="sessionTitle">Loading Session...</h1>
+
+        <p>Template: <span id="sessionTemplate"></span></p>
+        <p>Status: <span id="status">Not started</span></p>
+        <p>Timer: <span id="timer">00:00</span></p>
+        <p>Exits: <span id="exitCount">0</span></p>
+
+        <button id="startBtn">Start Session</button>
+        <button id="endBtn" disabled>End Session</button>
+
+    </section>
+
+    <section id="summary" class="card hidden">
+
+        <h2>Session Summary</h2>
+
+        <p>Total Exits: <span id="summaryExits">0</span></p>
+
+        <p>Total Inactive Time:
+            <span id="summaryInactive">0</span> seconds
+        </p>
+
+        <p>Policy Max Exits:
+            <span id="summaryMaxExits">0</span>
+        </p>
+
+        <p>Policy Result:
+            <span id="policyResult">Pending</span>
+        </p>
+
+    </section>
+
+    <section id="features" class="card"></section>
+
+</main>
+
+<script src="participant.js"></script>
+
+</body>
+</html>
